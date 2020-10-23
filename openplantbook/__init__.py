@@ -57,7 +57,7 @@ class OpenPlantBookApi:
             await self.get_plantbook_token()
             if not token:
                 _LOGGER.error("Unable to renew plantbook token")
-                return
+                return None
 
         url = f"{PLANTBOOK_BASEURL}/plant/detail/{species}"
         headers = {
@@ -71,6 +71,6 @@ class OpenPlantBookApi:
                     return res
         except Exception as exception:  # pylint: disable=broad-except
             _LOGGER.error("Unable to get plant from plantbook API: %s", str(exception))
-        return False
+        return None
 
 
