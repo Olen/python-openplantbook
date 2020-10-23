@@ -10,7 +10,7 @@ In order to use this API you need to login to Open Plantbook web UI at https://o
 ```
 import asyncio
 
-from openplantbook import OpenPlantBookApi
+from pyopenplantbook import OpenPlantBookApi
 
 client_id = "xxxx"
 secret = "yyyy"
